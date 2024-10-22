@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Presencial - Clube Trainer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #00473E;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #00473E;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .nav-link:hover {
+            color: #FFC857;
+        }
+
+        .btn-inscreva-se {
+            background-color: #FFC857;
+            color: #00473E;
+            border: none;
+        }
+
+        .btn-inscreva-se:hover {
+            background-color: #e5b74f;
+        }
+
+        .hero-section {
+            background-color: #6CC4A1;
+            color: #00473E;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .btn-cta {
+            background-color: #FFC857;
+            color: #00473E;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+
+        .btn-cta:hover {
+            background-color: #e5b74f;
+        }
+
+        .course-details {
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .course-details img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .register-button {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .about-course {
+            padding: 50px 0;
+            background-color: #00473E;
+            text-align: center;
+        }
+
+        .about-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .benefits-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            font-size: 1.1rem;
+            color: white;
+            margin: 10px 0;
+        }
+
+        .course-schedule {
+            padding: 50px 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .schedule-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00473E;
+            margin-bottom: 30px;
+        }
+
+        .schedule-description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .schedule-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .schedule-list li {
+            font-size: 1.1rem;
+            color: #00473E;
+            margin: 10px 0;
+        }
+
+        .instructor-section {
+            padding: 50px 0;
+            background-color: #00473E;
+            text-align: center;
+        }
+
+        .instructor-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .instructor-image {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .instructor-bio {
+            font-size: 1.2rem;
+            color: white;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonials-section {
+            padding: 50px 0;
+            background-color: #6CC4A1;
+            text-align: center;
+        }
+
+        .testimonials-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00473E;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            font-size: 1.2rem;
+            color: #00473E;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-highlight-section {
+            padding: 50px 0;
+            background-color: #00473E;
+            text-align: center;
+        }
+
+        .cta-highlight-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-highlight-button {
+            background-color: #FFC857;
+            color: #00473E;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+
+        .cta-highlight-button:hover {
+            background-color: #e5b74f;
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: #00473E;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a style="font-style: italic;" class="navbar-brand" href="#">
+                    Fisioterapia Esportiva
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-curso">Sobre o Curso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#instrutor">Instrutor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+
+                    </ul>
+                    <a href="https://cursos.clubetrainer.com.br/cursos/corpo-humano-uma-abordagem-postural-e-biomecanica-integrada-e-multidisciplinar/" target="_blank" class="btn btn-inscreva-se">Inscreva-se Agora</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Torne-se um Especialista em Fisioterapia com Nosso Curso Presencial!</h1>
+            <p class="hero-subtitle">Aprenda diretamente com os melhores profissionais da área e obtenha uma
+                certificação reconhecida.</p>
+            <img src="./img/davi-removebg-preview.png" alt="Instrutor em Ação" class="hero-image">
+            <div>
+                <a href="https://cursos.clubetrainer.com.br/cursos/corpo-humano-uma-abordagem-postural-e-biomecanica-integrada-e-multidisciplinar/" target="_blank" class="btn btn-cta">Garanta sua Vaga Agora!</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-curso" class="about-course">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <!-- Coluna do texto centralizado -->
+                <div class="col-md-8">
+                    <h2 class="about-title">Sobre o Curso</h2>
+                    <p class="about-description">A Clube Trainer convida você para o primeiro curso presencial de
+                        Fisioterapia Esportiva, desenvolvido para proporcionar um aprendizado prático e dinâmico,
+                        abordando os principais tópicos relacionados ao corpo humano, com uma abordagem postural e
+                        biomecânica integrada e multidisciplinar.</p>
+                    <ul class="benefits-list">
+                        <li style="color: #FFC857; font-weight: bold ; font-style: italic;">Condições especiais para
+                            profissionais Clube Trainer</li>
+                        <li style="color: #FFC857; font-style: italic;">Profissionais que se cadastrarem na plataforma
+                            Clube Trainer e criarem seu anúncio ganham 10% de desconto e podem parcelar em até 6x sem
+                            juros.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="background-color: #6CC4A1;" id="detalhes-curso" class="course-schedule">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <!-- Coluna do texto centralizado -->
+                <div class="col-md-8">
+                    <h2 class="schedule-title">Detalhes do Curso</h2>
+                    <p class="schedule-description">Agenda do Curso: Durante o curso, serão abordados temas como
+                        biomecânica aplicada, técnicas de avaliação postural, tratamento de lesões esportivas e muito
+                        mais.</p>
+                    <p class="schedule-description">Data e Local: <strong><span style="font-style: italic;">O curso será
+                                realizado no dia 30 de novembro, das 09h às 16h, na Academia Ecofit, localizada na Av.
+                                Cerro Corá, 582, São Paulo - SP.</span></strong></p>
+                    <p class="schedule-description">Público: Este curso é indicado para fisioterapeutas, estudantes de
+                        fisioterapia e profissionais da saúde que desejam se especializar em fisioterapia esportiva.</p>
+                    <p class="schedule-description">Valor da Inscrição: R$ 245,00</p>
+
+                    <!-- Localização do Google Maps -->
+                    <div class="map-container" style="margin-top: 20px;">
+                        <h2>Localização</h2>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1228601421163!2d-46.7035215844073!3d-23.592964668587936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5769e451eb75%3A0x46842b38b2f6a8fb!2sAv.%20Cerro%20Cor%C3%A1%2C%20582%20-%20Vila%20Romana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005040-000!5e0!3m2!1spt-BR!2sbr!4v1697988700827!5m2!1spt-BR!2sbr"
+                            width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="instrutor" class="instructor-section">
+        <div class="container">
+            <h2 class="instructor-title">Sobre o Instrutor</h2>
+            <img src="./img/palestrante.png" alt="Foto do Instrutor" class="instructor-image">
+            <p class="instructor-bio">Davi Costa é fisioterapeuta especializado em fisioterapia esportiva e osteopatia,
+                com ampla experiência no tratamento de atletas de alto rendimento. Atualmente, atua como fisioterapeuta
+                da Seleção Brasileira de Atletismo, ajudando atletas a alcançarem o máximo de seu desempenho físico.
+                Davi possui formação em osteopatia e vários cursos de especialização na área, garantindo que os alunos
+                tenham acesso ao melhor conhecimento técnico e prático.</p>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <h2 class="testimonials-title">Depoimentos</h2>
+            <div class="testimonial">
+                <img style="max-width: 100px;" src="./img/foto2.png" alt="Foto do Aluno" class="instructor-image">
+                <p>"O curso foi uma experiência única! O Davi é um excelente profissional e compartilhou muito do seu
+                    conhecimento de forma clara e prática. Recomendo a todos que queiram se especializar em fisioterapia
+                    esportiva."</p>
+                <p><strong>- João Silva, Fisioterapeuta</strong></p>
+            </div>
+            <div class="testimonial">
+                <img style="max-width: 100px;" src="./img/foto4.png" alt="Foto do Aluno" class="instructor-image">
+                <p>"Gostei muito do curso, os conteúdos foram extremamente relevantes e o ambiente proporcionou um
+                    networking incrível. Valeu cada minuto!"</p>
+                <p><strong>- Maria Oliveira, Estudante de Fisioterapia</strong></p>
+            </div>
+            <div class="testimonial">
+                <img style="max-width: 100px;" src="./img/foto5.png" alt="Foto do Aluno" class="instructor-image">
+                <p>"Aprendi técnicas que realmente posso aplicar na minha prática clínica. Recomendo para todos os
+                    profissionais da área!"</p>
+                <p><strong>- Pedro Santos, Fisioterapeuta</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-destaque" class="cta-highlight-section">
+        <div class="container">
+            <h2 class="cta-highlight-title">As vagas são limitadas! Não perca a chance de se inscrever e transformar sua
+                carreira.</h2>
+            <a href="https://cursos.clubetrainer.com.br/cursos/corpo-humano-uma-abordagem-postural-e-biomecanica-integrada-e-multidisciplinar/" target="_blank" class="btn cta-highlight-button">Inscreva-se Agora!</a>
+        </div>
+    </section>
+
+    <section style="background-color: #6CC4A1" class="container-fluid mt-0 py-5">
+        <div class="container">
+            <h2 style="color: #00473E;" class="text-center">Perguntas Frequentes</h2>
+            <div class="accordion mt-4" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Qual é a duração do curso?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body text-left">
+                            O curso tem duração de 6 horas, das 09h às 16h.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Onde será realizado o curso?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body text-left">
+                            O curso será realizado na Academia Ecofit, localizada na Av. Cerro Corá 582, São Paulo - SP.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Preciso ter experiência prévia em fisioterapia?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body text-left">
+                            O curso é indicado para fisioterapeutas, estudantes de fisioterapia e profissionais da saúde
+                            que desejam se especializar em fisioterapia esportiva, assim como para outros interessados na área.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                O curso oferece certificação?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                        <div class="card-body text-left">
+                            Sim, ao final do curso todos os participantes receberão um certificado de conclusão reconhecido.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                aria-controls="collapseFive">
+                                Quais são as formas de pagamento?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                        <div class="card-body text-left">
+                            Você pode pagar através de cartão de crédito, boleto bancário ou pix.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="final-cta" class="cta-highlight-section">
+        <div class="container">
+            <h2 class="cta-highlight-title">Resumo dos Benefícios</h2>
+            <p class="about-description">Ao participar do nosso curso presencial de Fisioterapia Esportiva, você terá
+                acesso a:</p>
+            <ul class="benefits-list">
+                <li>Aprendizado prático com os melhores profissionais da área.</li>
+                <li>Acesso exclusivo a materiais de estudo especializados.</li>
+                <li>Networking com outros profissionais da saúde e educação física.</li>
+                <li>Certificação reconhecida ao término do curso.</li>
+            </ul>
+            <div class="register-button">
+                <a href="https://cursos.clubetrainer.com.br/cursos/corpo-humano-uma-abordagem-postural-e-biomecanica-integrada-e-multidisciplinar/" target="_blank" class="btn cta-highlight-button">Garanta sua Vaga Agora!</a>
+            </div>
+            <p class="about-description mt-4">Se tiver alguma dúvida, entre em contato conosco:</p>
+            <p class="about-description">E-mail: <a href="mailto:contato@clubetrainer.com"
+                    style="color: #FFC857;">contato@clubetrainer.com</a> | Telefone: (11) 98765-4321</p>
+        </div>
+    </section>
+
+    <footer style="background-color: #6CC4A1" class=" py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 style="color: #00473E;">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#sobre-curso" style="color: #00473E; text-decoration: none;">Sobre a
+                                Instituição</a></li>
+                        <li><a href="#" style="color: #00473E; text-decoration: none;">Termos de Uso</a></li>
+                        <li><a href="#" style="color: #00473E; text-decoration: none;">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color: #00473E;">Informações de Contato</h5>
+                    <p style="color: #00473E;">Endereço: Av. Cerro Corá 582, São Paulo - SP</p>
+                    <p style="color: #00473E;">Telefone: (11) 98765-4321</p>
+                    <p style="color: #00473E;">E-mail: <a href="mailto:contato@clubetrainer.com"
+                            style="color: #00473E; text-decoration: none;">contato@clubetrainer.com</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color: #00473E;">Siga-nos</h5>
+                    <a href="#" style="color: #00473E; text-decoration: none;" class="me-3"><i
+                            class="bi bi-facebook"></i> Facebook</a>
+                    <a href="#" style="color: #00473E; text-decoration: none;" class="me-3"><i
+                            class="bi bi-instagram"></i> Instagram</a>
+                    <a href="#" style="color: #00473E; text-decoration: none;"><i class="bi bi-linkedin"></i>
+                        LinkedIn</a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p style="color: #00473E; text-decoration: none;">&copy; 2024 Clube Trainer. Todos os direitos
+                        reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
