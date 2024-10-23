@@ -261,13 +261,85 @@
         .cta-highlight-button:hover {
             background-color: #e5b74f;
         }
+/* Estilização da seção Perguntas Frequentes */
+.accordion .card-header {
+        background-color: #00816F; /* Cor de fundo semelhante ao da imagem */
+        border: none;
+        padding: 0;
+        border-radius: 0; /* Remove o border-radius */
+    }
 
-        footer {
-            padding: 20px 0;
-            background-color: #00473E;
-            color: #fff;
-            text-align: center;
-        }
+    .accordion .btn {
+        color: white;
+        background-color: #00816F;
+        font-weight: bold;
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+        padding: 15px;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none; /* Remover sublinhado */
+        border: 1px solid white; /* Borda branca para diferenciar */
+        border-radius: 0; /* Remove o border-radius */
+    }
+
+    /* Remover a cor azul quando clicado e focado */
+    .accordion .btn:focus, .accordion .btn:active {
+        outline: none;
+        color: white;
+        background-color: #007B66; /* Mantém a cor verde escuro ao clicar */
+    }
+
+    .accordion .btn:hover {
+        background-color: #007B66; /* Tom mais escuro ao passar o mouse */
+    }
+
+    .accordion .btn:after {
+        content: "+";
+        font-size: 24px;
+        color: white;
+    }
+
+    .accordion .btn.collapsed:after {
+        content: "+";
+    }
+
+    .accordion .btn:not(.collapsed):after {
+        content: "-";
+    }
+
+    .accordion .card-body {
+        background-color: #00473E; /* Fundo da resposta */
+        color: white;
+        border-top: 2px solid #00816F;
+        padding: 15px;
+        border-radius: 0; /* Remove o border-radius */
+        border: 1px solid white; /* Borda branca para diferenciar */
+    }
+
+    /* Remover espaçamento entre cards */
+    .card {
+        margin-bottom: 0;
+        border: none;
+        border-radius: 0; /* Remove o border-radius */
+    }
+
+    /* Estilo do título principal */
+    h2.text-center {
+        font-weight: bold;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    /* Estilo do título principal */
+    h2.text-center {
+        font-weight: bold;
+        color: white;
+        margin-bottom: 20px;
+    }
     </style>
 </head>
 
@@ -307,7 +379,7 @@
         <div class="container">
             <h1 class="hero-title">Torne-se um especialista em corpo humano com nosso curso presencial de Fisioterapia
                 Desportiva</h1>
-            <p class="hero-subtitle">Aprenda diretamente com os melhores profissionais da área de osteopatia e obtenha
+            <p class="hero-subtitle">Aprenda diretamente com um dos melhores profissionais da área de osteopatia e obtenha
                 uma certificado do curso.</p>
             <img src="./img/davi-removebg-preview.png" alt="Instrutor em Ação" class="hero-image">
             <div>
@@ -336,7 +408,7 @@
                         Atenção! Profissionais que se cadastrarem na plataforma <strong>Clube Trainer</strong> e
                         criarem seu anúncio ganham <strong>10% de desconto</strong> na inscrição do curso presencial,
                         além
-                        da possibilidade de parcelamento em até <strong>6x sem juros</strong>. Não perca essa
+                        da possibilidade de parcelamento de 2x sem juros e ou 6x com juros Não perca essa
                         oportunidade
                         exclusiva!
                     </p>
@@ -449,98 +521,92 @@
         </div>
     </section>
 
-    <section style="background-color: #6CC4A1" class="container-fluid mt-0 py-5" data-aos="fade-up"
-        data-aos-duration="2000" data-aos-delay="500" data-aos-easing="ease-in-out">
-        <div class="container">
-            <h2 style="color: #00473E;" class="text-center">Perguntas Frequentes</h2>
-            <div class="accordion mt-4" id="faqAccordion">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Qual é a duração do curso?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                        data-parent="#faqAccordion">
-                        <div class="card-body text-left">
-                            O curso tem duração de 6 horas, das 09h às 16h.
-                        </div>
-                    </div>
+    <section style="background-color: #6CC4A1;" class="container-fluid mt-0 py-5" data-aos="fade-up"
+    data-aos-duration="2000" data-aos-delay="500" data-aos-easing="ease-in-out">
+    <div class="container">
+        <h2 class="text-center">DÚVIDAS FREQUENTES</h2>
+        <div class="accordion mt-4" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            01 - QUAL É A DURAÇÃO DO CURSO?
+                        </button>
+                    </h2>
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-center collapsed" type="button"
-                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                aria-controls="collapseTwo">
-                                Onde será realizado o curso?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
-                        <div class="card-body text-left">
-                            O curso será realizado na Academia Ecofit, localizada na Av. Cerro Corá 582, São Paulo - SP.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-center collapsed" type="button"
-                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                aria-controls="collapseThree">
-                                Preciso ter experiência em fisioterapia?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
-                        <div class="card-body text-left">
-                            Não, você não precisa ter experiência prévia para fazer o curso. Ele é indicado para
-                            fisioterapeutas, estudantes de fisioterapia, profissionais da saúde que desejam se
-                            especializar em fisioterapia desportiva, e também para qualquer pessoa interessada na área.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-center collapsed" type="button"
-                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
-                                aria-controls="collapseFour">
-                                O curso oferece certificação?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
-                        <div class="card-body text-left">
-                            Sim, ao final do curso todos os participantes receberão um certificado de conclusão.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingFive">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-center collapsed" type="button"
-                                data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
-                                aria-controls="collapseFive">
-                                Quais são as formas de pagamento?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
-                        <div class="card-body text-left">
-                            Você pode realizar o pagamento com cartão de crédito, boleto bancário ou Pix. E não se
-                            esqueça: ao se
-                            cadastrar na plataforma Clube Trainer, você garante um desconto exclusivo de 10%!
-                        </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        O curso tem duração de 6 horas, das 09h às 16h.
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            02 - ONDE SERÁ REALIZADO O CURSO?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        O curso será realizado na Academia Ecofit, localizada na Rua Cerro Corá 580, Alto de Pinheiros - SP
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            03 - PRECISO TER EXPERIÊNCIA EM FISIOTERAPIA?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Você não precisa ter experiência prévia para fazer o curso. Ele é indicado para
+                        fisioterapeutas, estudantes de fisioterapia, profissionais da saúde que desejam se especializar
+                        em fisioterapia desportiva, e também para qualquer pessoa interessada na área.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            04 - O CURSO OFERECE CERTIFICAÇÃO?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Sim, ao final do curso todos os participantes receberão um certificado de conclusão.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            05 - QUAIS SÃO AS FORMAS DE PAGAMENTO?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Você pode realizar o pagamento com cartão de crédito, boleto bancário ou Pix. E não se esqueça:
+                        ao se cadastrar na plataforma Clube Trainer, você garante um desconto exclusivo de 10%!
+                    </div>
+                </div>
+            </div>
+           </div>
+    </div>
+</section>
 
 
     <section id="final-cta" class="cta-highlight-section" data-aos="fade-up" data-aos-duration="2000"
