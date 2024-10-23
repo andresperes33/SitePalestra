@@ -171,7 +171,7 @@
 
         .about-course {
             padding: 50px 0;
-            background-color: #51B6A4;
+            background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */
             text-align: center;
         }
 
@@ -231,7 +231,7 @@
 
         .instructor-section {
             padding: 50px 0;
-            background-color: #00473E;
+            background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */
             text-align: center;
         }
 
@@ -258,7 +258,7 @@
 
         .testimonials-section {
             padding: 50px 0;
-            background-color: #6CC4A1;
+            background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */
             text-align: center;
         }
 
@@ -282,7 +282,7 @@
 
         .cta-highlight-section {
             padding: 50px 0;
-            background-color: #00473E;
+            background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */
             text-align: center;
         }
 
@@ -306,7 +306,7 @@
         }
 /* Estilização da seção Perguntas Frequentes */
 .accordion .card-header {
-        background-color: #00816F; /* Cor de fundo semelhante ao da imagem */
+    background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */
         border: none;
         padding: 0;
         border-radius: 0; /* Remove o border-radius */
@@ -314,7 +314,7 @@
 
     .accordion .btn {
         color: white;
-        background-color: #00816F;
+        background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */
         font-weight: bold;
         font-size: 18px;
         width: 100%;
@@ -441,33 +441,46 @@
     <section id="sobre-curso" class="about-course" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"
     data-aos-easing="ease-in-out">
     <div class="container">
-        <div class="row justify-content-center text-center">
-            <!-- Coluna centralizada com a imagem -->
-            <div class="col-md-8">
+        <div class="row align-items-center">
+            <!-- Coluna para o conteúdo à esquerda (primeira parte) -->
+            <div class="col-md-6 text-left">
                 <h2 class="about-title">Sobre o Curso</h2>
-                <!-- Substituindo o primeiro parágrafo por uma imagem -->
-                <img src="./img/Curso David.png" alt="Sobre o Curso" class="img-fluid" />
+                <p class="about-description">O Clube Trainer convida você para o primeiro curso presencial de
+                    Fisioterapia Desportiva, desenvolvido para proporcionar um aprendizado prático e dinâmico,
+                    abordando os principais tópicos relacionados ao corpo humano, com uma abordagem postural e
+                    biomecânica integrada e multidisciplinar.</p>
+            </div>
 
+            <!-- Coluna para a imagem à direita -->
+            <div class="col-md-6 text-center">
+                <img src="./img/palestrafisio.jpeg" alt="Imagem do Curso" class="img-fluid" />
+            </div>
+        </div>
+
+        <!-- Segunda parte do conteúdo centralizado -->
+        <div class="row justify-content-center text-center mt-4">
+            <div class="col-md-8">
                 <!-- Texto enfatizado para o desconto -->
-                <p class="about-description mt-4" style="font-weight: bold; color: black">
+                <p class="about-description mt-4" style="font-weight: bold; color: #FFC857;">
                     Atenção! Profissionais que se cadastrarem na plataforma <strong>Clube Trainer</strong> e
                     criarem seu anúncio ganham <strong>10% de desconto</strong> na inscrição do curso presencial,
                     além da possibilidade de parcelamento de 2x sem juros e ou 6x com juros. Não perca essa
                     oportunidade exclusiva!
                 </p>
-                <p class="about-description mt-3" style="color: white; text-align: center;">
+                <p class="about-description mt-3" style="color: white;">
                     Clique no botão abaixo para se cadastrar e garantir seu desconto agora mesmo!
                 </p>
 
                 <!-- Setas antes do botão -->
-                <div style="text-align: center;">
+                <div>
                     <i class="fas fa-arrow-down" style="color: white; font-size: 24px;"></i>
                     <i class="fas fa-arrow-down" style="color: white; font-size: 24px;"></i>
                 </div>
 
                 <!-- Botão de cadastro enfatizado -->
-                <div style="text-align: center;">
-                    <a href="https://clubetrainer.com.br/seja-um-profissional" target="_blank" class="btn btn-cta mt-3">
+                <div>
+                    <a href="https://clubetrainer.com.br/seja-um-profissional" target="_blank"
+                        class="btn btn-cta mt-3">
                         Cadastrar no Clube Trainer!
                     </a>
                 </div>
@@ -480,20 +493,33 @@
 
 
 
-<section style="background-color: #4EB798;" id="detalhes-curso" class="course-schedule" data-aos="fade-up"
+
+
+<section style="background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */" id="detalhes-curso" class="course-schedule" data-aos="fade-up"
     data-aos-duration="1000" data-aos-delay="50" data-aos-easing="ease-in-out">
     <div class="container">
-        <div class="row justify-content-center text-center">
-            <!-- Coluna do texto centralizado -->
-            <div class="col-md-8">
+        <div class="row align-items-center">
+            <!-- Coluna do texto à esquerda -->
+            <div class="col-md-6 text-left">
                 <h2 class="schedule-title">Detalhes do Curso</h2>
-                <!-- Substituindo o primeiro parágrafo por uma imagem -->
-                <img src="./img/WhatsApp Image 2024-10-18 at 11.42.56.jpeg" alt="Detalhes do Curso" class="img-fluid" />
+                <p class="schedule-description">Agenda do Curso: Durante o curso, serão abordados temas como biomecânica
+                    aplicada, técnicas de avaliação postural, tratamento de lesões desportivas e muito mais.</p>
+                <p class="schedule-description">Público: Este curso é indicado para fisioterapeutas, estudantes de
+                    fisioterapia e profissionais da saúde que desejam se especializar em fisioterapia esportiva.</p>
+                    <p class="schedule-description">Data e Local: <strong><span style="font-style: italic;">O curso será
+                        realizado no dia 30 de novembro, das 09h às 16h, na Academia Ecofit, localizada na Rua
+                        Cerro Corá, 580, Alto de Pinheiros - SP.</span></strong></p>
+            </div>
 
-                <p class="schedule-description">Data e Local: <strong><span style="font-style: italic;">O curso será
-                            realizado no dia 30 de novembro, das 09h às 16h, na Academia Ecofit, localizada na Rua Cerro
-                            Corá, 580, Alto de Pinheiros - SP.</span></strong></p>
+            <!-- Coluna da imagem à direita -->
+            <div class="col-md-6 text-center">
+                <img src="./img/palestra.png" alt="Imagem do Curso" class="img-fluid" />
+            </div>
+        </div>
 
+        <div class="row justify-content-center text-center mt-4">
+            <!-- Seção centralizada com valor e localização -->
+            <div class="col-md-8">
                 <p class="schedule-description"><strong>Valor da Inscrição: R$ 245,00</strong></p>
 
                 <!-- Localização do Google Maps -->
@@ -510,7 +536,6 @@
                     <a href="https://cursos.clubetrainer.com.br/cursos/corpo-humano-uma-abordagem-postural-e-biomecanica-integrada-e-multidisciplinar/"
                         target="_blank" class="btn btn-cta">Garanta sua Vaga Agora!</a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -569,7 +594,7 @@
         </div>
     </section>
 
-    <section style="background-color: #6CC4A1;" class="container-fluid mt-0 py-5" data-aos="fade-up"
+    <section style="background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */" class="container-fluid mt-0 py-5" data-aos="fade-up"
     data-aos-duration="1000" data-aos-delay="50" data-aos-easing="ease-in-out">
     <div class="container">
         <h2 class="text-center">DÚVIDAS FREQUENTES</h2>
@@ -679,7 +704,7 @@
         </div>
     </section>
 
-    <footer style="background-color: #6CC4A1" class=" py-4">
+    <footer style="background: linear-gradient(90deg, #54A6AB, #2F6E71); /* Gradiente da esquerda para a direita */" class=" py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
